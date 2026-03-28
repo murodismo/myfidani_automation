@@ -1,0 +1,38 @@
+
+Running 1 test using 1 worker
+
+  тЬШ  1 [chromium] тА║ tests\auth\login.spec.js:54:9 тА║ Authentication Tests - Login тА║ Login Localization & Negative Flow (Uzbek Cyrillic) (9.6s)
+
+
+  1) [chromium] тА║ tests\auth\login.spec.js:54:9 тА║ Authentication Tests - Login тА║ Login Localization & Negative Flow (Uzbek Cyrillic) 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('form')
+    Expected substring: [32m"╨Я╨░╤А╨╛╨╗ 1 ╨║╨░╤В╤В╨░ ╥│╨░╤А╤Д, 1 ╨║╨╕╤З╨╕╨║ ╥│╨░╤А╤Д, 1 ╤А╨░╥Ы╨░╨╝ [7mva[27m ╨║╨░╨╝╨╕╨┤╨░ 6 ╤В╨░ ╨▒╨╡╨╗╨│╨╕╨┤╨░╨╜ ╨╕╨▒╨╛╤А╨░╤В ╨▒╤Ю╨╗╨╕╤И╨╕ ╨║╨╡╤А╨░╨║."[39m
+    Received string:    [31m"[7m╨в╨╡╨╗╨╡╤Д╨╛╨╜ ╤А╨░╥Ы╨░╨╝╨╕+998╨Я╨░╤А╨╛╨╗[27m╨Я╨░╤А╨╛╨╗ 1 ╨║╨░╤В╤В╨░ ╥│╨░╤А╤Д, 1 ╨║╨╕╤З╨╕╨║ ╥│╨░╤А╤Д, 1 ╤А╨░╥Ы╨░╨╝ [7m╨▓╨░[27m ╨║╨░╨╝╨╕╨┤╨░ 6 ╤В╨░ ╨▒╨╡╨╗╨│╨╕╨┤╨░╨╜ ╨╕╨▒╨╛╤А╨░╤В ╨▒╤Ю╨╗╨╕╤И╨╕ ╨║╨╡╤А╨░╨║.[7m╥▓╨╕╤Б╨╛╨▒╨╕╨╜╨│╨╕╨╖ ╨╣╤Ю╥Ы╨╝╨╕?  ╨а╤Ю╨╣╤Е╨░╤В╨┤╨░╨╜ ╤Ю╤В╨╕╤И╨Ъ╨╕╤А╨╕╤И[27m"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('form')[22m
+    [2m    8 ├Ч locator resolved to <form>тАж</form>[22m
+    [2m      - unexpected value "╨в╨╡╨╗╨╡╤Д╨╛╨╜ ╤А╨░╥Ы╨░╨╝╨╕+998╨Я╨░╤А╨╛╨╗╨Я╨░╤А╨╛╨╗ 1 ╨║╨░╤В╤В╨░ ╥│╨░╤А╤Д, 1 ╨║╨╕╤З╨╕╨║ ╥│╨░╤А╤Д, 1 ╤А╨░╥Ы╨░╨╝ ╨▓╨░ ╨║╨░╨╝╨╕╨┤╨░ 6 ╤В╨░ ╨▒╨╡╨╗╨│╨╕╨┤╨░╨╜ ╨╕╨▒╨╛╤А╨░╤В ╨▒╤Ю╨╗╨╕╤И╨╕ ╨║╨╡╤А╨░╨║.╥▓╨╕╤Б╨╛╨▒╨╕╨╜╨│╨╕╨╖ ╨╣╤Ю╥Ы╨╝╨╕?  ╨а╤Ю╨╣╤Е╨░╤В╨┤╨░╨╜ ╤Ю╤В╨╕╤И╨Ъ╨╕╤А╨╕╤И"[22m
+
+
+       at pages\LoginPage.js:76
+
+      74 |         }).toPass();
+      75 |      } else if (typeof message === 'string') {
+    > 76 |         await expect(this.form).toContainText(message);
+         |                                 ^
+      77 |      } else {
+      78 |         await expect(this.page.getByText(message)).toBeVisible();
+      79 |      }
+        at LoginPage.expectErrorMessage (C:\Users\murod\Desktop\myfidani_automation\tests\pages\LoginPage.js:76:33)
+        at C:\Users\murod\Desktop\myfidani_automation\tests\auth\login.spec.js:60:23
+
+    Error Context: test-results\auth-login-Authentication--bde33-gative-Flow-Uzbek-Cyrillic--chromium\error-context.md
+
+  1 failed
+    [chromium] тА║ tests\auth\login.spec.js:54:9 тА║ Authentication Tests - Login тА║ Login Localization & Negative Flow (Uzbek Cyrillic) 

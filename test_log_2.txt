@@ -1,0 +1,70 @@
+
+Running 3 tests using 3 workers
+
+  ✓  3 [chromium] › tests\auth\login.spec.js:63:5 › Login all negative cases (12.2s)
+  ✘  1 [webkit] › tests\auth\login.spec.js:63:5 › Login all negative cases (16.2s)
+  ✘  2 [firefox] › tests\auth\login.spec.js:63:5 › Login all negative cases (16.3s)
+
+
+  1) [firefox] › tests\auth\login.spec.js:63:5 › Login all negative cases ──────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('form')
+    Expected pattern: [32m/Noto.g.ri parol/i[39m
+    Received string:  [31m"Telefon raqami+998Foydalanuvchi topilmadiParolHisobingiz yo'qmi?  Ro'yxatdan o'tishKirish"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('form')[22m
+    [2m    3 × locator resolved to <form>…</form>[22m
+    [2m      - unexpected value "Telefon raqami+998ParolHisobingiz yo'qmi?  Ro'yxatdan o'tishLoading...Kirish"[22m
+    [2m    6 × locator resolved to <form>…</form>[22m
+    [2m      - unexpected value "Telefon raqami+998Foydalanuvchi topilmadiParolHisobingiz yo'qmi?  Ro'yxatdan o'tishKirish"[22m
+
+
+      78 |   await page.locator('#phone').fill('50 757 41 12_');
+      79 |   await page.getByRole('button', { name: 'Kirish' }).click();
+    > 80 |   await expect(page.locator('form')).toContainText(/Noto.g.ri parol/i);
+         |                                      ^
+      81 |   await page.getByRole('textbox', { name: 'Parolni kiriting' }).click();
+      82 |   await page.locator('#phone').click();
+      83 |   await page.locator('#phone').fill('50 757 41__');
+        at C:\Users\murod\Desktop\myfidani_automation\tests\auth\login.spec.js:80:38
+
+    Error Context: test-results\auth-login-Login-all-negative-cases-firefox\error-context.md
+
+  2) [webkit] › tests\auth\login.spec.js:63:5 › Login all negative cases ───────────────────────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('form')
+    Expected pattern: [32m/Noto.g.ri parol/i[39m
+    Received string:  [31m"Telefon raqami+998Foydalanuvchi topilmadiParolHisobingiz yo'qmi?  Ro'yxatdan o'tishKirish"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('form')[22m
+    [2m    3 × locator resolved to <form>…</form>[22m
+    [2m      - unexpected value "Telefon raqami+998ParolHisobingiz yo'qmi?  Ro'yxatdan o'tishLoading...Kirish"[22m
+    [2m    6 × locator resolved to <form>…</form>[22m
+    [2m      - unexpected value "Telefon raqami+998Foydalanuvchi topilmadiParolHisobingiz yo'qmi?  Ro'yxatdan o'tishKirish"[22m
+
+
+      78 |   await page.locator('#phone').fill('50 757 41 12_');
+      79 |   await page.getByRole('button', { name: 'Kirish' }).click();
+    > 80 |   await expect(page.locator('form')).toContainText(/Noto.g.ri parol/i);
+         |                                      ^
+      81 |   await page.getByRole('textbox', { name: 'Parolni kiriting' }).click();
+      82 |   await page.locator('#phone').click();
+      83 |   await page.locator('#phone').fill('50 757 41__');
+        at C:\Users\murod\Desktop\myfidani_automation\tests\auth\login.spec.js:80:38
+
+    Error Context: test-results\auth-login-Login-all-negative-cases-webkit\error-context.md
+
+  2 failed
+    [firefox] › tests\auth\login.spec.js:63:5 › Login all negative cases ───────────────────────────
+    [webkit] › tests\auth\login.spec.js:63:5 › Login all negative cases ────────────────────────────
+  1 passed (18.9s)

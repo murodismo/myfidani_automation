@@ -1,0 +1,34 @@
+
+Running 3 tests using 3 workers
+
+  ✓  3 [webkit] › tests\auth\login.spec.js:63:5 › Login all negative cases (13.7s)
+  ✓  2 [chromium] › tests\auth\login.spec.js:63:5 › Login all negative cases (14.8s)
+  ✘  1 [firefox] › tests\auth\login.spec.js:63:5 › Login all negative cases (30.3s)
+
+
+  1) [firefox] › tests\auth\login.spec.js:63:5 › Login all negative cases ──────────────────────────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByText('Foydalanuvchi topilmadi')[22m
+    [2m    - locator resolved to <p class="chakra-text css-1ghdl5y">Foydalanuvchi topilmadi</p>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+
+
+      72 |   await expect(page.locator('form')).toContainText('Foydalanuvchi topilmadi');
+      73 |   await page.locator('#phone').click();
+    > 74 |   await page.getByText('Foydalanuvchi topilmadi').click();
+         |                                                   ^
+      75 |   await page.getByRole('textbox', { name: 'Parolni kiriting' }).click();
+      76 |   await page.getByRole('textbox', { name: 'Parolni kiriting' }).fill('MurodIsmoilov#12');
+      77 |   await page.locator('#phone').click();
+        at C:\Users\murod\Desktop\myfidani_automation\tests\auth\login.spec.js:74:51
+
+    Error Context: test-results\auth-login-Login-all-negative-cases-firefox\error-context.md
+
+  1 failed
+    [firefox] › tests\auth\login.spec.js:63:5 › Login all negative cases ───────────────────────────
+  2 passed (33.6s)
