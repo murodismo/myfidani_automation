@@ -1,0 +1,30 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://my.chartakfidani.uz",
+      "localStorage": [
+        {
+          "name": "i18nextLng",
+          "value": "en"
+        },
+        {
+          "name": "driver_status_v1",
+          "value": "{\"statusDurations\":{\"active\":0,\"inactive\":0,\"repairing\":0,\"lunch\":-1800},\"lastUpdated\":null}"
+        },
+        {
+          "name": "chakra-ui-color-mode",
+          "value": "light"
+        },
+        {
+          "name": "yandex_maps_api_key",
+          "value": "{\"state\":{\"apiKey\":\"4c93a421-e9ba-48bc-8857-bac3444ceb55\"},\"version\":0}"
+        },
+        {
+          "name": "auth_v1",
+          "value": "{\"token\":{\"access_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiIiLCJjbGllbnRfcGxhdGZvcm1faWQiOiIiLCJjbGllbnRfdHlwZV9pZCI6ImZjNDRmZDA2LTU2OWYtNGMwMy1hMTJjLWNhNWFlMjEwNzE4YyIsImRhdGEiOiJHby1odHRwLWNsaWVudC8yLjAiLCJleHAiOjE3NzQ3Njg0NDEsImlhdCI6MTc3NDY4MjA0MSwiaWQiOiJkYjdlZTllNy0yZTg2LTQ3MDEtYTk0YS02YmI3NDVjNzA3MjciLCJpcCI6IjEwLjEwLjAuMy8zMiIsImxvZ2luX3RhYmxlX3NsdWciOiJjbGllbnRzIiwicHJvamVjdF9pZCI6IjBhODFmYWNiLWVjYWUtNDdhMi05MWZiLTEzZDgxNGQ5M2ViZCIsInJvbGVfaWQiOiJmNzczNmM2ZS02Yzg4LTQ3OTEtOWJlZi1iZGMxZTU1NTYwMjYiLCJ0YWJsZXMiOltdLCJ1c2VyX2lkIjoiNjhhMWJiODUtNGYxMC00NmFjLWFiYTUtNzc4OGUwOGNjMTAwIiwidXNlcl9pZF9hdXRoIjoiNzgwNThjYjMtNTNiZC00N2JhLTg5NTQtMjVkNWU1Y2VlZDQ1In0.d57ShwESk1R3_WZsQVyg_il-v8X3_kulNHxYcyqD0Os\",\"created_at\":\"2026-03-28T07:14:01.353Z\",\"expires_at\":\"2026-04-27T07:14:01.000Z\",\"refresh_in_seconds\":86400,\"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiIiLCJjbGllbnRfcGxhdGZvcm1faWQiOiIiLCJjbGllbnRfdHlwZV9pZCI6ImZjNDRmZDA2LTU2OWYtNGMwMy1hMTJjLWNhNWFlMjEwNzE4YyIsImRhdGEiOiJHby1odHRwLWNsaWVudC8yLjAiLCJleHAiOjE3NzcyNzQwNDEsImlhdCI6MTc3NDY4MjA0MSwiaWQiOiJkYjdlZTllNy0yZTg2LTQ3MDEtYTk0YS02YmI3NDVjNzA3MjciLCJpcCI6IjEwLjEwLjAuMy8zMiIsImxvZ2luX3RhYmxlX3NsdWciOiJjbGllbnRzIiwicHJvamVjdF9pZCI6IjBhODFmYWNiLWVjYWUtNDdhMi05MWZiLTEzZDgxNGQ5M2ViZCIsInJvbGVfaWQiOiJmNzczNmM2ZS02Yzg4LTQ3OTEtOWJlZi1iZGMxZTU1NTYwMjYiLCJ0YWJsZXMiOltdLCJ1c2VyX2lkIjoiNjhhMWJiODUtNGYxMC00NmFjLWFiYTUtNzc4OGUwOGNjMTAwIiwidXNlcl9pZF9hdXRoIjoiNzgwNThjYjMtNTNiZC00N2JhLTg5NTQtMjVkNWU1Y2VlZDQ1In0.45blZBQspwoqGxi2zmNmE_tQPTtunVSFaD5URadfoD8\",\"updated_at\":\"2026-03-28T07:14:01.353Z\"},\"user\":{\"activity_id\":\"bb467c30-6df1-4faf-8a84-8c10921c99dc\",\"branches_id\":\"35bb75f8-60f9-47a4-a7a3-2ca71e0b126b\",\"client_limit\":null,\"client_type_id\":\"fc44fd06-569f-4c03-a12c-ca5ae210718c\",\"created_at\":\"2026-03-03T03:33:51.92214Z\",\"deleted_at\":null,\"employee_id\":\"15dd2ee8-8747-4cad-9da3-814b8acd1e8d\",\"full_name\":\"Murod\",\"guid\":\"68a1bb85-4f10-46ac-aba5-7788e08cc100\",\"id\":null,\"image\":null,\"inn\":null,\"locations_id\":null,\"login\":null,\"name\":\"Murod\",\"password\":\"$2a$10$ROyeE1VjaM/aceb1sGIJ8.fkrvcafqgJEu/M0cCHm/2BQSnA6M/RW\",\"person_type\":[\"individual\"],\"phone\":\"+998507574112\",\"role_id\":\"f7736c6e-6c88-4791-9bef-bdc1e5556026\",\"updated_at\":\"2026-03-26T11:44:51.053496Z\",\"user_id_auth\":\"78058cb3-53bd-47ba-8954-25d5e5ceed45\"},\"isAuthorized\":true,\"role\":{\"id\":\"f7736c6e-6c88-4791-9bef-bdc1e5556026\",\"name\":\"Клиент\",\"name_en\":\"Client\"},\"phoneOtp\":{\"phone\":\"\",\"sms_id\":\"\",\"token\":\"\"}}"
+        }
+      ]
+    }
+  ]
+}

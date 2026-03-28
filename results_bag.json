@@ -1,0 +1,27 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish
+[1A[2K  1) [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.innerText: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('div:has(img[alt="meat"])').filter({ has: getByRole('button', { name: 'Add' }) }).first().locator('h3')[22m
+
+
+      239 |     const firstMeatCard = page.locator('div:has(img[alt="meat"])').filter({ has: page.getByRole('button', { name: 'Add' }) }).first();
+      240 |     await expect(firstMeatCard).toBeVisible({ timeout: 10000 });
+    > 241 |     const productName = await firstMeatCard.locator('h3').innerText();
+          |                                                           ^
+      242 |     console.log(`Adding to bag: ${productName}`);
+      243 |     
+      244 |     await firstMeatCard.getByRole('button', { name: 'Add' }).click();
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:241:59
+
+    Error Context: test-results\client-main_page-Go-shtni--f184e-ga-qo-shilishini-tekshirish-Mobile-Chrome\error-context.md
+
+
+[1A[2K  1 failed
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 

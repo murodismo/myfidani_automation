@@ -1,0 +1,32 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish
+[1A[2K  1) [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('div:has(h3):has(button:has-text("Add"))').first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('div:has(h3):has(button:has-text("Add"))').first()[22m
+
+
+      242 |     // H3 sarlavhasi bor bo'lgan va Add tugmasi bo'lgan kartani topamiz (bu kategoriya sarlavhalarini chetlab o'tadi)
+      243 |     const firstMeatCard = page.locator('div:has(h3):has(button:has-text("Add"))').first();
+    > 244 |     await expect(firstMeatCard).toBeVisible({ timeout: 15000 });
+          |                                 ^
+      245 |     
+      246 |     const productName = await firstMeatCard.locator('h3').first().innerText();
+      247 |     console.log(`Adding to bag: ${productName}`);
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:244:33
+
+    Error Context: test-results\client-main_page-Go-shtni--f184e-ga-qo-shilishini-tekshirish-Mobile-Chrome\error-context.md
+
+
+[1A[2K  1 failed
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 

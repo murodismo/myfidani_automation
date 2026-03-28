@@ -1,0 +1,52 @@
+
+Running 3 tests using 3 workers
+
+[1A[2K[1/3] [Mobile Chrome] тА║ tests\client\main_page.spec.js:55:5 тА║ Asosiy funksionallikni tekshirish тА║ Mahsulotni savatchaga qo'shish va uni tekshirish
+[1A[2K[2/3] [Mobile Chrome] тА║ tests\client\main_page.spec.js:34:5 тА║ Asosiy funksionallikni tekshirish тА║ Xabarnomalar mazmunini va tafsilotlarini tekshirish
+[1A[2K[3/3] [Mobile Chrome] тА║ tests\client\main_page.spec.js:81:5 тА║ Asosiy funksionallikni tekshirish тА║ Qarz oynasi va filtrlar ishlashini tekshirish
+[1A[2K  1) [Mobile Chrome] тА║ tests\client\main_page.spec.js:34:5 тА║ Asosiy funksionallikni tekshirish тА║ Xabarnomalar mazmunini va tafsilotlarini tekshirish 
+
+    TypeError: LoginPage is not a constructor
+
+      18 |     // Har bir testdan oldin Login jarayonini amalga oshirish
+      19 |     test.beforeEach(async ({ page }) => {
+    > 20 |         loginPage = new LoginPage(page);
+         |                     ^
+      21 |         homePage = new HomePage(page);
+      22 |         bagPage = new BagPage(page);
+      23 |         notificationPage = new NotificationPage(page);
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:20:21
+
+
+[1A[2K  2) [Mobile Chrome] тА║ tests\client\main_page.spec.js:55:5 тА║ Asosiy funksionallikni tekshirish тА║ Mahsulotni savatchaga qo'shish va uni tekshirish 
+
+    TypeError: LoginPage is not a constructor
+
+      18 |     // Har bir testdan oldin Login jarayonini amalga oshirish
+      19 |     test.beforeEach(async ({ page }) => {
+    > 20 |         loginPage = new LoginPage(page);
+         |                     ^
+      21 |         homePage = new HomePage(page);
+      22 |         bagPage = new BagPage(page);
+      23 |         notificationPage = new NotificationPage(page);
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:20:21
+
+
+[1A[2K  3) [Mobile Chrome] тА║ tests\client\main_page.spec.js:81:5 тА║ Asosiy funksionallikni tekshirish тА║ Qarz oynasi va filtrlar ishlashini tekshirish 
+
+    TypeError: LoginPage is not a constructor
+
+      18 |     // Har bir testdan oldin Login jarayonini amalga oshirish
+      19 |     test.beforeEach(async ({ page }) => {
+    > 20 |         loginPage = new LoginPage(page);
+         |                     ^
+      21 |         homePage = new HomePage(page);
+      22 |         bagPage = new BagPage(page);
+      23 |         notificationPage = new NotificationPage(page);
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:20:21
+
+
+[1A[2K  3 failed
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:34:5 тА║ Asosiy funksionallikni tekshirish тА║ Xabarnomalar mazmunini va tafsilotlarini tekshirish 
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:55:5 тА║ Asosiy funksionallikni tekshirish тА║ Mahsulotni savatchaga qo'shish va uni tekshirish 
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:81:5 тА║ Asosiy funksionallikni tekshirish тА║ Qarz oynasi va filtrlar ishlashini tekshirish 

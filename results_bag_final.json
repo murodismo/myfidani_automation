@@ -1,0 +1,32 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish
+[1A[2K  1) [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('div:has(img[alt="meat"])').filter({ has: getByRole('button', { name: 'Add' }) }).first().getByRole('heading')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('div:has(img[alt="meat"])').filter({ has: getByRole('button', { name: 'Add' }) }).first().getByRole('heading')[22m
+
+
+      245 |     // Use getByRole for the heading to be more robust
+      246 |     const productHeading = firstMeatCard.getByRole('heading');
+    > 247 |     await expect(productHeading).toBeVisible({ timeout: 10000 });
+          |                                  ^
+      248 |     const productName = await productHeading.innerText();
+      249 |     console.log(`Adding to bag: ${productName}`);
+      250 |     
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:247:34
+
+    Error Context: test-results\client-main_page-Go-shtni--f184e-ga-qo-shilishini-tekshirish-Mobile-Chrome\error-context.md
+
+
+[1A[2K  1 failed
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 

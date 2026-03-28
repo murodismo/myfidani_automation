@@ -1,0 +1,68 @@
+
+Running 3 tests using 3 workers
+
+[1A[2K[1/3] [Mobile Chrome] тА║ tests\client\main_page.spec.js:123:5 тА║ My FiDaNi Client Dashboard тА║ Qarz oynasi ochilishini va qidiruv filtrlarini tekshirish
+[1A[2K[2/3] [Mobile Chrome] тА║ tests\client\main_page.spec.js:77:5 тА║ My FiDaNi Client Dashboard тА║ Xabarnomalar mazmunini va tafsilotlarini tekshirish
+[1A[2K[3/3] [Mobile Chrome] тА║ tests\client\main_page.spec.js:95:5 тА║ My FiDaNi Client Dashboard тА║ Mahsulotni savatchaga qo'shish jarayonini tekshirish
+[1A[2K  1) [Mobile Chrome] тА║ tests\client\main_page.spec.js:77:5 тА║ My FiDaNi Client Dashboard тА║ Xabarnomalar mazmunini va tafsilotlarini tekshirish 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('//button[.//img[contains(@src, "notification") or contains(@src, "bell") or contains(@src, "Bell")]]').first()[22m
+
+
+      51 |     } else {
+      52 |         const fallback = page.locator('//button[.//img[contains(@src, "notification") or contains(@src, "bell") or contains(@src, "Bell")]]').first();
+    > 53 |         await fallback.click();
+         |                        ^
+      54 |     }
+      55 | }
+      56 |
+        at clickNotificationIcon (C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:53:24)
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:78:9
+
+    Error Context: test-results\client-main_page-My-FiDaNi-eabbf-a-tafsilotlarini-tekshirish-Mobile-Chrome\error-context.md
+
+
+[1A[2K  2) [Mobile Chrome] тА║ tests\client\main_page.spec.js:123:5 тА║ My FiDaNi Client Dashboard тА║ Qarz oynasi ochilishini va qidiruv filtrlarini tekshirish 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('textbox', { name: 'Search' })[22m
+    [2m    - locator resolved to <input readonly placeholder="Search" aria-readonly="true" class="chakra-input css-1igr09k"/>[22m
+    [2m    - fill("╨▒╨╡╨╗")[22m
+    [2m  - attempting fill action[22m
+    [2m    2 ├Ч waiting for element to be visible, enabled and editable[22m
+    [2m      - element is not editable[22m
+    [2m    - retrying fill action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 ├Ч waiting for element to be visible, enabled and editable[22m
+    [2m      - element is not editable[22m
+    [2m    - retrying fill action[22m
+    [2m      - waiting 100ms[22m
+    [2m    49 ├Ч waiting for element to be visible, enabled and editable[22m
+    [2m       - element is not editable[22m
+    [2m     - retrying fill action[22m
+    [2m       - waiting 500ms[22m
+
+
+      126 |         
+      127 |         // '╨▒╨╡╨╗' mahsulotini qidirish
+    > 128 |         await search.fill('╨▒╨╡╨╗');
+          |                      ^
+      129 |         await page.getByRole('button', { name: 'Add' }).first().click();
+      130 |         
+      131 |         const modal = page.getByRole('dialog');
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:128:22
+
+    Error Context: test-results\client-main_page-My-FiDaNi-adc25-iruv-filtrlarini-tekshirish-Mobile-Chrome\error-context.md
+
+
+[1A[2K  2 failed
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:77:5 тА║ My FiDaNi Client Dashboard тА║ Xabarnomalar mazmunini va tafsilotlarini tekshirish 
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:123:5 тА║ My FiDaNi Client Dashboard тА║ Qarz oynasi ochilishini va qidiruv filtrlarini tekshirish 
+  1 passed (32.0s)
