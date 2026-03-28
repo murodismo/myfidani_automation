@@ -1,0 +1,39 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish
+[1A[2K[Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish
+Adding to bag: Debt:
+
+[1A[2K  1) [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 
+
+    Error: locator.click: Error: strict mode violation: locator('div').filter({ has: getByRole('button', { name: 'Add' }) }).first().getByRole('button', { name: 'Add' }) resolved to 10 elements:
+        1) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka getByRole('button', { name: 'Add' }).first()
+        2) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka getByRole('button', { name: 'Add' }).nth(1)
+        3) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka getByRole('button', { name: 'Add' }).nth(2)
+        4) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka getByRole('button', { name: 'Add' }).nth(3)
+        5) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka getByRole('button', { name: 'Add' }).nth(4)
+        6) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka getByRole('button', { name: 'Add' }).nth(5)
+        7) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka locator('div:nth-child(8) > .chakra-button')
+        8) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka locator('div:nth-child(9) > .chakra-button')
+        9) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka locator('div:nth-child(10) > .chakra-button')
+        10) <button type="button" class="chakra-button css-gn4ybz">тАж</button> aka locator('div:nth-child(11) > .chakra-button')
+
+    Call log:
+    [2m  - waiting for locator('div').filter({ has: getByRole('button', { name: 'Add' }) }).first().getByRole('button', { name: 'Add' })[22m
+
+
+      248 |     console.log(`Adding to bag: ${productName}`);
+      249 |     
+    > 250 |     await firstMeatCard.getByRole('button', { name: 'Add' }).click();
+          |                                                              ^
+      251 |     
+      252 |     // 3. Modalni boshqarish
+      253 |     const modal = page.getByRole('dialog');
+        at C:\Users\murod\Desktop\myfidani_automation\tests\client\main_page.spec.js:250:62
+
+    Error Context: test-results\client-main_page-Go-shtni--f184e-ga-qo-shilishini-tekshirish-Mobile-Chrome\error-context.md
+
+
+[1A[2K  1 failed
+    [Mobile Chrome] тА║ tests\client\main_page.spec.js:224:5 тА║ Go'shtni bag qismiga qo'shilishini tekshirish 

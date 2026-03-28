@@ -1,0 +1,260 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\murod\\Desktop\\myfidani_automation\\playwright.config.js",
+    "rootDir": "C:/Users/murod/Desktop/myfidani_automation/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/murod/Desktop/myfidani_automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "C:/Users/murod/Desktop/myfidani_automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/murod/Desktop/myfidani_automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "C:/Users/murod/Desktop/myfidani_automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/murod/Desktop/myfidani_automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "Mobile Webkit",
+        "name": "Mobile Webkit",
+        "testDir": "C:/Users/murod/Desktop/myfidani_automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "client\\main_page.spec.js",
+      "file": "client/main_page.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "My FiDaNi Client Dashboard",
+          "file": "client/main_page.spec.js",
+          "line": 59,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Xabarnomalar mazmunini va tafsilotlarini tekshirish",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30079,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\murod\\Desktop\\myfidani_automation\\tests\\client\\main_page.spec.js",
+                            "column": 24,
+                            "line": 53
+                          },
+                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//button[.//img[contains(@src, \"notification\") or contains(@src, \"bell\") or contains(@src, \"Bell\")]]').first()\u001b[22m\n\n\n  51 |     } else {\n  52 |         const fallback = page.locator('//button[.//img[contains(@src, \"notification\") or contains(@src, \"bell\") or contains(@src, \"Bell\")]]').first();\n> 53 |         await fallback.click();\n     |                        ^\n  54 |     }\n  55 | }\n  56 |\n    at clickNotificationIcon (C:\\Users\\murod\\Desktop\\myfidani_automation\\tests\\client\\main_page.spec.js:53:24)\n    at C:\\Users\\murod\\Desktop\\myfidani_automation\\tests\\client\\main_page.spec.js:78:9"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T10:21:35.778Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\murod\\Desktop\\myfidani_automation\\test-results\\client-main_page-My-FiDaNi-eabbf-a-tafsilotlarini-tekshirish-Mobile-Chrome\\error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ac3aaaec634731ce256-d5f1c6009df5a3d20f67",
+              "file": "client/main_page.spec.js",
+              "line": 77,
+              "column": 5
+            },
+            {
+              "title": "Mahsulotni savatchaga qo'shish jarayonini tekshirish",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8396,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T10:21:35.800Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5ac3aaaec634731ce256-6094aac0824ae6e7d20a",
+              "file": "client/main_page.spec.js",
+              "line": 95,
+              "column": 5
+            },
+            {
+              "title": "Qarz oynasi ochilishini va qidiruv filtrlarini tekshirish",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 30086,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\murod\\Desktop\\myfidani_automation\\tests\\client\\main_page.spec.js",
+                            "column": 22,
+                            "line": 128
+                          },
+                          "message": "Error: locator.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Search' })\u001b[22m\n\u001b[2m    - locator resolved to <input readonly placeholder=\"Search\" aria-readonly=\"true\" class=\"chakra-input css-1igr09k\"/>\u001b[22m\n\u001b[2m    - fill(\"бел\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not editable\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    49 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not editable\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  126 |         \n  127 |         // 'бел' mahsulotini qidirish\n> 128 |         await search.fill('бел');\n      |                      ^\n  129 |         await page.getByRole('button', { name: 'Add' }).first().click();\n  130 |         \n  131 |         const modal = page.getByRole('dialog');\n    at C:\\Users\\murod\\Desktop\\myfidani_automation\\tests\\client\\main_page.spec.js:128:22"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T10:21:35.771Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\murod\\Desktop\\myfidani_automation\\test-results\\client-main_page-My-FiDaNi-adc25-iruv-filtrlarini-tekshirish-Mobile-Chrome\\error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5ac3aaaec634731ce256-4e40c7a7afed683d0215",
+              "file": "client/main_page.spec.js",
+              "line": 123,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-28T10:21:34.152Z",
+    "duration": 31963.818,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

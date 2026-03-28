@@ -1,7 +1,24 @@
 const TelegramBot = require('node-telegram-bot-api');
 
 /**
- * Custom Playwright Reporter - Statistika + Detalli Bug Reportlar
+ * HTML teglarini Telegram formatiga moslab tozalash (Escape)
+ */
+function escapeHTML(str) {
+  if (!str) return "";
+  return str.replace(/[&<>"']/g, function(m) {
+    switch (m) {
+      case '&': return '&amp;';
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '"': return '&quot;';
+      case "'": return '&#039;';
+      default: return m;
+    }
+  });
+}
+
+/**
+ * Custom Playwright Reporter - Detalli Bug Reportlar (Tozalangan variant)
  */
 class TelegramReporter {
   constructor(options = {}) {
@@ -24,7 +41,7 @@ class TelegramReporter {
       actual: null,
       steps: result.steps.map(s => {
         const icon = s.category === 'test.step' ? (s.error ? '❌' : '✅') : '🔹';
-        return `${icon} ${s.title}`;
+        return `${icon} ${escapeHTML(s.title)}`;
       }).join('\n')
     };
 
@@ -49,7 +66,7 @@ class TelegramReporter {
     if (!this.token || !this.chatId) return;
     const bot = new TelegramBot(this.token, { polling: false });
 
-    // 1-XABAR: TO'LIQ STATISTIKA (Oldingi formatda)
+    // 1-XABAR: UMUMIY STATISTIKA
     const overallIcon = result.status === 'passed' ? '✅' : '❌';
     let summary = `🚀 <b>PLAYWRIGHT TEST SUMMARY</b>\n`;
     summary += `━━━━━━━━━━━━━━━━━━━━\n`;
@@ -59,7 +76,7 @@ class TelegramReporter {
     summary += `📝 <b>TEST CASES:</b>\n`;
     this.testDetails.forEach((t, i) => {
       const icon = t.status === 'passed' ? '✅' : t.status === 'skipped' ? '⚪' : '❌';
-      summary += `${i + 1}. ${icon} ${t.title} (${t.duration}s)\n`;
+      summary += `${i + 1}. ${icon} ${escapeHTML(t.title)} (${t.duration}s)\n`;
     });
 
     summary += `\n📊 <b>STATISTICS:</b>\n`;
@@ -70,33 +87,41 @@ class TelegramReporter {
 
     try {
       await bot.sendMessage(this.chatId, summary, { parse_mode: 'HTML' });
-    } catch (e) { console.error('Statistika yuborishda xato:', e.message); }
+    } catch (e) {
+      console.error('Statistika error:', e.message);
+    }
 
-    // 2-XABARLAR: HAR BIR FAIL UCHUN ALOHIDA DETALLI REPORT
+    // 2-XABARLAR: HAR BIR FAIL UCHUN ALOHIDA DETALLI BUG REPORT
     for (const t of this.testDetails) {
       if (t.status === 'failed' || t.status === 'timedOut') {
         let bugReport = `🚨 <b>DETAILED BUG REPORT</b>\n`;
         bugReport += `━━━━━━━━━━━━━━━━━━━━\n`;
-        bugReport += `🏷 <b>Title:</b> <i>${t.title}</i>\n`;
-        bugReport += `📍 <b>File:</b> <code>${t.location}</code>\n\n`;
+        bugReport += `🏷 <b>Title:</b> <i>${escapeHTML(t.title)}</i>\n`;
+        bugReport += `📍 <b>File:</b> <code>${escapeHTML(t.location)}</code>\n\n`;
         
         if (t.steps) {
           bugReport += `👣 <b>Steps Executed:</b>\n${t.steps}\n\n`;
         }
         
-        bugReport += `📥 <b>Expected Result:</b>\n<code>${t.expected || 'Nomalum'}</code>\n\n`;
-        bugReport += `📤 <b>Actual Result:</b>\n<code>${t.actual || 'Nomalum'}</code>\n\n`;
+        bugReport += `📥 <b>Expected Result:</b>\n<code>${escapeHTML(t.expected) || 'Nomalum'}</code>\n\n`;
+        bugReport += `📤 <b>Actual Result:</b>\n<code>${escapeHTML(t.actual) || 'Nomalum'}</code>\n\n`;
         
-        bugReport += `⚠️ <b>Full Error:</b>\n<pre>${t.fullError ? t.fullError.substring(0, 1500) : 'No error message'}</pre>\n`;
+        const safeError = t.fullError ? escapeHTML(t.fullError.substring(0, 1500)) : 'No error message';
+        bugReport += `⚠️ <b>Full Error:</b>\n<pre>${safeError}</pre>\n`;
         bugReport += `━━━━━━━━━━━━━━━━━━━━`;
 
         try {
           await bot.sendMessage(this.chatId, bugReport, { parse_mode: 'HTML' });
-        } catch (e) { console.error('Bug report yuborishda xato:', e.message); }
+        } catch (e) {
+          console.error('Bug report error:', e.message);
+          // Agar HTML xato bo'lsa, oddiy matn sifatida qayta jo'natamiz
+          const plainMsg = `🚨 BUG: ${t.title}\nERROR: ${t.fullError ? t.fullError.substring(0, 200) : ''}`;
+          await bot.sendMessage(this.chatId, plainMsg).catch(() => {});
+        }
       }
     }
     
-    console.log('\n✅ To\'liq statistika va detalli bug reportlar yuborildi.');
+    console.log('\n✅ Batafsil reportlar Telegramga yuborildi.');
   }
 }
 
